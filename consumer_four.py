@@ -1,7 +1,7 @@
 # consumer_one.py
 import pika
 
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='localhost'))
 channel = connection.channel()
 
 channel.queue_declare(queue='order_processing')
